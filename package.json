@@ -1,0 +1,27 @@
+{
+  "name": "rdstation-desafiotecnico-lucasgabriel-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf _site",
+    "sass": "sass --style=compressed src/assets/scss/:src/_includes/compiledStyles/",
+    "build": "ELEVENTY_PRODUCTION=true npm run sass && ELEVENTY_PRODUCTION=true eleventy --formats=md,njk",
+    "watch:eleventy": "eleventy --serve --formats=md,njk",
+    "watch:sass": "npm run sass -- --watch",
+    "start": "npm-run-all clean --parallel watch:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.3",
+    "sass": "^1.34.0"
+  }
+}
