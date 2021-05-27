@@ -1,0 +1,24 @@
+{
+  "dropdownMenu": [
+    {
+      "title": "METODOLOGIA",
+      "content": [{ "text": "Tudo sobre Inbound Marketing", "href": "#" }]
+    },
+    {
+      "title": "CURSOS",
+      "content": [
+        { "text": "RD University", "href": "#" },
+        { "text": "Introdução ao Inbound Marketing", "href": "#" },
+        { "text": "RD Station Marketing Basic", "href": "#" }
+      ]
+    },
+    {
+      "title": "FERRAMENTAS",
+      "content": [
+        { "text": "Avalie seu funil de vendas", "href": "#" },
+        { "text": "Compare suas métricas de Email Marketing", "href": "#" },
+        { "text": "Calcule o ROI do RD Station Marketing", "href": "#" }
+      ]
+    }
+  ]
+}
