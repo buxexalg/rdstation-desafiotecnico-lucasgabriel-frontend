@@ -15,6 +15,7 @@ del.sync(dirToClean, { dot: true });
 
 module.exports = function (eleventyConfig) {
 
+	
 	eleventyConfig.setUseGitIgnore(false);
 
 	eleventyConfig.addPassthroughCopy("./src/**/*.js")
