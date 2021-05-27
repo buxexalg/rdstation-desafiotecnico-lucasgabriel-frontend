@@ -1,0 +1,173 @@
+@import "./variables.scss";
+
+@mixin headerFooterStyle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: auto;
+}
+
+@mixin bottomButtonTrapezoid {
+  content: "";
+  position: absolute;
+  border-top: 4px solid $gray-100;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.rdLogo {
+  max-height: 2rem;
+}
+
+header {
+  border-bottom: 1px solid $gray-30;
+  padding: 1.5rem 0;
+
+  .headerDiv {
+    @include headerFooterStyle;
+    background-color: $white;
+  }
+
+  .headerNavDiv {
+    display: flex;
+    width: 65%;
+    justify-content: flex-end;
+    align-items: center;
+
+    .menuItem {
+      color: $dark;
+      text-decoration: none;
+      font-weight: 700;
+      margin-right: 4rem;
+      position: relative;
+    }
+
+    .dropdown {
+      &::after {
+        margin-left: 0.5rem;
+        content: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.6891 5.05951L0.128782 1.49917C-0.0429287 1.32745 -0.0429287 1.04907 0.128782 0.877374L0.544037 0.462119C0.715455 0.290701 0.993274 0.290371 1.1651 0.461386L4.00001 3.28302L6.8349 0.461386C7.00672 0.290371 7.28454 0.290701 7.45596 0.462119L7.87122 0.877374C8.04293 1.04908 8.04293 1.32747 7.87122 1.49917L4.3109 5.05949C4.1392 5.2312 3.86081 5.2312 3.6891 5.05951Z' fill='%23212429'/%3E%3C/svg%3E%0A");
+        vertical-align: 10%;
+      }
+    }
+
+    .dropdownMenu {
+      display: none;
+      position: absolute;
+      z-index: 2;
+      top: 40px;
+      background-color: $white;
+      justify-content: space-between;
+      padding: 1.5rem;
+      box-shadow: 0px 8px 18px rgba(33, 36, 41, 0.16);
+      border-radius: 2px;
+
+      .listItemContainer {
+        width: 30%;
+        .listItemTitle {
+          font-weight: 800;
+          color: $primary-color-60;
+          border-bottom: 1px solid $gray-30;
+          margin: 0;
+          padding-bottom: 1rem;
+        }
+
+        ul {
+          padding: 0;
+          .listItem {
+            list-style: none;
+            margin: 1rem 0;
+            a {
+              color: $gray-100;
+              text-decoration: none;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
+    button {
+      font-weight: 800;
+    }
+
+    .navBarFirstButton {
+      background-color: $white;
+      border: 2px solid $gray-100;
+      width: 5.8rem;
+      height: 2.1rem;
+      position: relative;
+      margin-right: 1rem;
+
+      &::after {
+        width: 5rem;
+        height: 0;
+        bottom: -6px;
+        left: -2px;
+        @include bottomButtonTrapezoid;
+      }
+    }
+
+    .navBarSecondButton {
+      background-color: $primary-color-60;
+      border: none;
+      width: 7rem;
+      height: 2.1rem;
+      position: relative;
+
+      img {
+        margin-left: 0.5rem;
+      }
+
+      &::after {
+        @include bottomButtonTrapezoid;
+        width: 6.25rem;
+        height: 0;
+        bottom: -4px;
+        left: 0px;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $primary-color-60;
+  padding: 2rem 0;
+
+  .footerUpperDiv,
+  .footerLowerDiv {
+    @include headerFooterStyle;
+    background-color: $primary-color-60;
+  }
+
+  .footerUpperDiv {
+    border-bottom: 1px solid $primary-color-50;
+    padding-bottom: 1.5rem;
+
+    .navSocialIcons {
+      a {
+        margin-left: 1.55rem;
+      }
+    }
+  }
+
+  .footerLowerDiv {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 1rem;
+    color: $dark;
+
+    .footerTextSpan {
+      font-weight: bold;
+    }
+
+    a {
+      color: $dark;
+    }
+  }
+}
+
+.navBar {
+	position: relative;
+}
