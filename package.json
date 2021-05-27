@@ -5,12 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rimraf _site",
     "sass": "sass --style=compressed src/assets/scss/:src/_includes/compiledStyles/",
-    "build": "ELEVENTY_PRODUCTION=true npm run sass && ELEVENTY_PRODUCTION=true eleventy --formats=md,njk",
-    "watch:eleventy": "eleventy --serve --formats=md,njk",
+    "build": "ELEVENTY_PRODUCTION=true npm run sass && ELEVENTY_PRODUCTION=true eleventy --formats=md,njk,png,svg,js",
+    "watch:eleventy": "eleventy --serve --formats=md,njk,png,svg,js",
     "watch:sass": "npm run sass -- --watch",
-    "start": "npm-run-all clean --parallel watch:*"
+    "start": "npm-run-all --parallel watch:*"
   },
   "keywords": [],
   "author": "",
