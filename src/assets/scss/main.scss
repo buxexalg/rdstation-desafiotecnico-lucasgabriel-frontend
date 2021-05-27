@@ -1,1 +1,10 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
 @import "./variables.scss";
+@import "./headerAndFooter.scss";
