@@ -1,0 +1,78 @@
+---
+layout: layouts/root.njk
+title: Multiball
+---
+
+<header>
+  <div class="headerDiv">
+    <img src="./assets/svg/logo.svg" alt="Logo RD Station" class="rdLogo" />
+
+    <div class="headerNavDiv">
+      <nav class="navBar">
+        <a href="#" class="menuItem">Menu 1</a>
+        <a href="#" class="dropdown menuItem">Menu 2 </a>
+        <div class="dropdownMenu">
+          {% for item in metadata.dropdownMenu %}
+          <div class="listItemContainer">
+            <h3 class="listItemTitle">{{ item.title }}</h3>
+            <ul>
+              {% for listItem in item.content %}
+              <li class="listItem">
+                <a href={{ listItem.href }}>{{ listItem.text }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+        <a href="#" class="menuItem">Menu 3</a>
+        <a href="#" class="menuItem">Menu 4</a>
+        <a href="#" class="menuItem">Menu 5</a>
+      </nav>
+      <div class="navBarButtons">
+        <button class="navBarFirstButton">BUTTON</button>
+        <button class="navBarSecondButton">
+          BUTTON
+          <img
+            src="./assets/svg/rightArrow.svg"
+            alt="Ir para a próxima página"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="/_includes/js/header.js"></script>
+</header>
+
+<footer>
+  <div class="footerUpperDiv">
+    <img
+      src="./assets/svg/logoBranca.svg"
+      alt="Logo RD Station"
+      class="rdLogo"
+    />
+    <nav class="navSocialIcons">
+      <a href="https://www.twitter.com/rd_station"
+        ><img src="./assets/svg/twitter.svg" alt="Link Twitter"
+      /></a>
+      <a href="https://www.facebook.com/ResultadosDigitais/"
+        ><img src="./assets/svg/facebook.svg" alt="Link Facebook"
+      /></a>
+      <a href="https://www.linkedin.com/showcase/resultadosdigitais/"
+        ><img src="./assets/svg/linkedin.svg" alt="Link Linkedin"
+      /></a>
+      <a href="https://www.instagram.com/resdigitais/"
+        ><img src="./assets/svg/instagram.svg" alt="Link Instagram"
+      /></a>
+      <a href="https://www.youtube.com/channel/UC5lPKvmw6-DFya_qreisENQ"
+        ><img src="./assets/svg/youtube.svg" alt="Link Youtube"
+      /></a>
+    </nav>
+  </div>
+  <div class="footerLowerDiv">
+    <p class="footerText">
+      © 2021 <span class="footerTextSpan">RD Station</span>.
+      <a href="#">Política de Privacidade</a>.
+    </p>
+  </div>
+</footer>
