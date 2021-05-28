@@ -1,11 +1,13 @@
 ---
 layout: layouts/root.njk
-title: Multiball
+title: RD Station
 ---
 
 <header>
   <div class="headerDiv">
-    <img src="./assets/svg/logo.svg" alt="Logo RD Station" class="rdLogo" />
+    <a href="/"
+      ><img src="./assets/svg/logo.svg" alt="Logo RD Station" class="rdLogo"
+    /></a>
 
     <div class="headerNavDiv">
       <nav class="navBar">
@@ -44,13 +46,76 @@ title: Multiball
   <script src="/_includes/js/header.js"></script>
 </header>
 
+<main>
+  <section class="whyBussinessChooseRD">
+    <h1 class="whyBussinessChooseRDTitle title">
+      Por que mais de 25.000 empresas escolheram o RD Station?
+    </h1>
+    <span class="whyBussinessChooseRDText">
+      Combinamos nossos produtos de Marketing e Vendas com pessoas que se
+      importam com seus resultados e um ecossistema que apoia o seu negócio do
+      planejamento à prática.
+    </span>
+    <a href="#" class="whyBussinessChooseRDButton">CRIAR CONTA GRATUITA</a>
+  </section>
+  
+  <section class="understandRdStation">
+    <div class="backgroundRectangle"></div>
+    <div class="widthContainer">
+      <div class="understandRdStationText">
+        <h1 class="understandRdStationTitle title">
+          Entenda melhor como o RD Station Marketing funciona na prática
+        </h1>
+        <a href="#" class="understandRdStationButton"
+          >ASSISTA A DEMONSTRAÇÃO
+          <img src="./assets/svg/playButton.svg" alt="Botão de play"
+        /></a>
+      </div>
+      <div class="understandRdStationVideo">
+        <img
+          class="understandRdStationVideoImage"
+          src="./assets/images/videoImage.png"
+          alt="Imagem vídeo"
+        />
+        <img
+          class="understandRdStationVideoPlay"
+          src="./assets/svg/playButtonVideo.svg"
+          alt="Botão de play"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="freeAccountSection">
+    <section class="freeAccountText">
+      <h1 class="freeAccountTitle title">
+        Torne sua operação de Marketing ainda mais poderosa
+      </h1>
+      <span class="freeAccountText"
+        >O RD Station Marketing se conecta as principais ferramentas nacionais e
+        internacionais</span
+      >
+      <a href="#" class="freeAccountButton">CRIAR CONTA GRATUITA</a>
+    </section>
+    <section class="partnerTools">
+      {% for item in metadata.partnerToolsLogos %}
+      <div class="partnerToolsContainer">
+        <img src={{ item.src }} alt={{ "Logo " + item.title }}>
+        <span class="partnerTitle">{{ item.title }}</span>
+      </div>
+      {% endfor %}
+    </section>
+  </section>
+</main>
+
 <footer>
   <div class="footerUpperDiv">
-    <img
-      src="./assets/svg/logoBranca.svg"
-      alt="Logo RD Station"
-      class="rdLogo"
-    />
+    <a href="/"
+      ><img
+        src="./assets/svg/logoBranca.svg"
+        alt="Logo RD Station"
+        class="rdLogo"
+    /></a>
     <nav class="navSocialIcons">
       <a href="https://www.twitter.com/rd_station"
         ><img src="./assets/svg/twitter.svg" alt="Link Twitter"
