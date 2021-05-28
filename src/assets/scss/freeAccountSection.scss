@@ -1,0 +1,68 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.freeAccountSection {
+  max-width: $layout-width;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3rem;
+  color: $gray-100;
+  height: 50vh;
+  margin-bottom: 2rem;
+
+  .freeAccountText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .freeAccountTitle {
+      font-size: 40px;
+    }
+
+    .freeAccountButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2.5rem;
+      font-weight: 800;
+      width: 15rem;
+      height: 2.5rem;
+      background-color: $primary-color-60;
+      border: none;
+      text-decoration: none;
+      color: $gray-100;
+      position: relative;
+
+      &::after {
+        @include bottomButtonTrapezoid;
+        width: 14.3rem;
+        height: 0;
+        bottom: -4px;
+      }
+    }
+  }
+
+  .partnerTools {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(2, 100px);
+    grid-column-gap: 5rem;
+	margin: auto;
+
+    .partnerToolsContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .partnerTitle {
+        text-align: center;
+        margin-top: 0.5rem;
+        font-weight: 400;
+        font-size: 14px;
+        color: $dark;
+      }
+    }
+  }
+}
