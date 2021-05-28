@@ -1,19 +1,12 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 @mixin headerFooterStyle {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1440px;
+  max-width: $layout-width;
   margin: auto;
-}
-
-@mixin bottomButtonTrapezoid {
-  content: "";
-  position: absolute;
-  border-top: 4px solid $gray-100;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
 }
 
 .rdLogo {
@@ -133,6 +126,7 @@ header {
 footer {
   background-color: $primary-color-60;
   padding: 2rem 0;
+  color: $gray-100;
 
   .footerUpperDiv,
   .footerLowerDiv {
@@ -169,5 +163,5 @@ footer {
 }
 
 .navBar {
-	position: relative;
+  position: relative;
 }
