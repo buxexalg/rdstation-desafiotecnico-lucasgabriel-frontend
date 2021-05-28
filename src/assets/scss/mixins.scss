@@ -1,0 +1,7 @@
+@mixin bottomButtonTrapezoid {
+  content: "";
+  position: absolute;
+  border-top: 4px solid $gray-100;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
