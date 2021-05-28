@@ -1,10 +1,20 @@
+@import "./variables.scss";
+@import "./headerAndFooter.scss";
+@import "./freeAccountSection.scss";
+@import "./understandRdStation.scss";
+@import "./whyBussinessChooseRD.scss";
+
 * {
 	box-sizing: border-box;
+	font-family: $nunito;
 }
 
 body {
 	margin: 0;
 }
 
-@import "./variables.scss";
-@import "./headerAndFooter.scss";
+.title {
+	font-family: $darkergrotesque;
+	font-weight: 900;
+	color: $gray-100;
+}
