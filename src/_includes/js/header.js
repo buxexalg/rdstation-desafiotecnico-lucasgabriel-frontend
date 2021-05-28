@@ -3,12 +3,28 @@ const dropdownMenu = document.querySelector(".dropdownMenu");
 
 //hover saindo quando coloca mouse no menu
 dropdownItem.forEach((item) => {
-  item.addEventListener("mouseenter", (e) => {
+  item.addEventListener("mouseenter", () => {
     dropdownMenu.style.display = "flex";
+
   });
-  item.addEventListener("mouseleave", (e) => {
+  item.addEventListener("mouseleave", () => {
+    if (!mouseOverDropdown) {
+      setTimeout(() => {
+        dropdownMenu.style.display = "none";
+      }, 150);
+    }
+  });
+});
+
+let mouseOverDropdown = true;
+
+dropdownMenu.addEventListener("mouseenter", () => {
+  mouseOverDropdown = false;
+  });
+
+  dropdownMenu.addEventListener("mouseleave", () => {
+    mouseOverDropdown = true;
     setTimeout(() => {
       dropdownMenu.style.display = "none";
     }, 150);
   });
-});
