@@ -20,5 +20,47 @@
         { "text": "Calcule o ROI do RD Station Marketing", "href": "#" }
       ]
     }
+  ],
+  "partnerToolsLogos" : [
+    {
+      "src": "./assets/svg/rdSymbol.svg",
+      "title": "RD Station CRM"
+    },
+    {
+      "src": "./assets/svg/salesforceSymbol.svg",
+      "title": "Salesforce"
+    },
+    {
+      "src": "./assets/svg/googleSymbol.svg",
+      "title": "Google"
+    },
+    {
+      "src": "./assets/svg/facebookSymbol.svg",
+      "title": "Facebook"
+    },
+    {
+      "src": "./assets/svg/linkedinSymbol.svg",
+      "title": "LinkedIn"
+    },
+    {
+      "src": "./assets/svg/wordpressSymbol.svg",
+      "title": "Wordpress"
+    },
+    {
+      "src": "./assets/svg/hotmartSymbol.svg",
+      "title": "Hotmart"
+    },
+    {
+      "src": "./assets/svg/pagseguroSymbol.svg",
+      "title": "PagSeguro"
+    },
+    {
+      "src": "./assets/svg/shopifySymbol.svg",
+      "title": "Shopify"
+    },
+    {
+      "src": "./assets/svg/zapierSymbol.svg",
+      "title": "Zapify"
+    }
   ]
 }
