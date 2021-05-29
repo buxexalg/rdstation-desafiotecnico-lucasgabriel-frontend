@@ -47,7 +47,7 @@ header {
     .dropdownMenu {
       display: none;
       position: absolute;
-      z-index: 2;
+      z-index: 10;
       top: 40px;
       background-color: $white;
       justify-content: space-between;
