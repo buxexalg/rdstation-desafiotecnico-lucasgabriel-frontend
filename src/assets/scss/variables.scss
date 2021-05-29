@@ -21,5 +21,18 @@ $gray-10: #F1F3F5;
 
 $white: #FFFFFF;
 
-$layout-width: 1440px
+$layout-width: 75vw;
+$layout-width-smallerdesktop: 95vw;
+$layout-width-cellphone: 95vw;
 
+
+$smallerdesktop: 1399px;
+$cellphone: 600px;
+
+/* @media screen and (max-width: $smallerdesktop) {
+    max-width: $layout-width-smallerdesktop;
+  }
+
+  @media screen and (max-width: $cellphone) {
+    max-width: $layout-width-cellphone;
+  } */

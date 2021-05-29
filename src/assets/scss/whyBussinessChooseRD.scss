@@ -15,6 +15,14 @@
   padding: 2rem 20rem;
   text-align: center;
 
+  @media screen and (max-width: $smallerdesktop) {
+    max-width: $layout-width-smallerdesktop;
+  }
+
+  @media screen and (max-width: $cellphone) {
+    max-width: $layout-width-cellphone;
+  }
+
   .whyBussinessChooseRDTitle {
     color: $white;
     font-size: 40px;

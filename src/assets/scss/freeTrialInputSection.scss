@@ -26,6 +26,20 @@
       z-index: 0;
       pointer-events: none;
       right: -230px;
+
+      @media screen and (max-width: 1399px) {
+        border-bottom: 200px solid transparent;
+        border-right: 700px solid $white;
+        right: -32px !important;
+      }
+    }
+
+    @media screen and (max-width: $smallerdesktop) {
+      max-width: $layout-width-smallerdesktop;
+    }
+
+    @media screen and (max-width: $cellphone) {
+      max-width: $layout-width-cellphone;
     }
 
     .moreOpportunitiesForYou {
@@ -69,6 +83,11 @@
         z-index: 0;
         left: -250px;
         top: 0;
+
+        @media screen and (max-width: $smallerdesktop) {
+          left: -150px;
+          border-bottom: 60px solid transparent;
+        }
       }
 
       .backgroundRectangle {
@@ -81,6 +100,10 @@
         margin-top: auto;
         margin-bottom: auto;
         z-index: -1;
+
+        @media screen and (max-width: $smallerdesktop) {
+          left: -34px;
+        }
       }
 
       .togetherSinceFirstStepTitle {

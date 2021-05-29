@@ -20,6 +20,14 @@ header {
   .headerDiv {
     @include headerFooterStyle;
     background-color: $white;
+
+    @media screen and (max-width: $smallerdesktop) {
+      max-width: $layout-width-smallerdesktop;
+    }
+
+    @media screen and (max-width: $cellphone) {
+      max-width: $layout-width-cellphone;
+    }
   }
 
   .headerNavDiv {
@@ -27,6 +35,10 @@ header {
     width: 65%;
     justify-content: flex-end;
     align-items: center;
+
+    @media screen and (max-width: $smallerdesktop) {
+      width: 70%;
+    }
 
     .menuItem {
       color: $dark;

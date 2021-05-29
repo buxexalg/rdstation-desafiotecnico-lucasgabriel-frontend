@@ -13,6 +13,9 @@
     border-bottom: 670px solid $white;
     border-right: 1000px solid transparent;
     pointer-events: none;
+    @media screen and (max-width: $smallerdesktop) {
+      border-right: 700px solid transparent;
+    }
   }
 
   .rdStationEfficiencyDiv {
@@ -25,6 +28,14 @@
     padding: 2rem;
     z-index: 1;
 
+    @media screen and (max-width: $smallerdesktop) {
+      max-width: $layout-width-smallerdesktop;
+    }
+
+    @media screen and (max-width: $cellphone) {
+      max-width: $layout-width-cellphone;
+    }
+
     .rdoerImageDiv {
       position: relative;
       &::after {
@@ -34,6 +45,10 @@
         border-right: 120px solid $gray-10;
         border-bottom: 120px solid transparent;
         z-index: 5;
+
+        @media screen and (max-width: $smallerdesktop) {
+          right: 0px;
+        }
       }
     }
 
