@@ -47,11 +47,38 @@ title: RD Station
 </header>
 
 <main>
+  <section class="rdStationEfficiency">
+    <div class="rdStationEfficiencyDiv">
+      <div class="rdoerImageDiv">
+        <img
+          src="./assets/images/rdoerImage.png"
+          alt="Imagem Rdoer"
+          class="rdoerImage"
+        />
+      </div>
+      <div class="rdStationEfficiencyContent">
+        <h1 class="rdStationEfficiencyTitle title">
+          Resultados previsíveis e mais clientes para sua empresa
+        </h1>
+        <h3 class="rdStationEfficiencySubTitle">
+          Torne sua atuação no Marketing Digital mais eficaz
+        </h3>
+
+        <ul>
+          {% for listItem in metadata.rdEfficiency %}
+          <li class="listItem">
+            {{ listItem.text | safe }}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="rdProsCards">
     <h1 class="rdProsTitle title">
       A ferramenta de Automação de Marketing líder na América Latina
     </h1>
-
     <div class="rdProsCardsContent">
       {% for item in metadata.prosCards %}
       <div class="rdProsCardsIndividualCard">
