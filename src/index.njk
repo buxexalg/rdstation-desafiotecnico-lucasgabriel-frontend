@@ -47,6 +47,22 @@ title: RD Station
 </header>
 
 <main>
+  <section class="rdProsCards">
+    <h1 class="rdProsTitle title">
+      A ferramenta de Automação de Marketing líder na América Latina
+    </h1>
+
+    <div class="rdProsCardsContent">
+      {% for item in metadata.prosCards %}
+      <div class="rdProsCardsIndividualCard">
+        <img src={{ item.icon }} alt="Ícone do card" />
+        <h1 class="rdProsCardsIndividualCardTitle title">{{ item.title }}</h1>
+        <p class="rdProsCardsIndividualCardText">{{ item.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
   <section class="whyBussinessChooseRD">
     <h1 class="whyBussinessChooseRDTitle title">
       Por que mais de 25.000 empresas escolheram o RD Station?
@@ -58,7 +74,7 @@ title: RD Station
     </span>
     <a href="#" class="whyBussinessChooseRDButton">CRIAR CONTA GRATUITA</a>
   </section>
-  
+
   <section class="understandRdStation">
     <div class="backgroundRectangle"></div>
     <div class="widthContainer">
