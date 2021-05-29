@@ -1,0 +1,74 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.rdStationEfficiency {
+  background-color: $gray-10;
+  z-index: -1;
+  padding-top: 5rem;
+
+  &::before {
+    content: "";
+    background-color: $gray-10;
+    z-index: 0;
+    border-bottom: 670px solid $white;
+    border-right: 1000px solid transparent;
+    pointer-events: none;
+  }
+
+  .rdStationEfficiencyDiv {
+    max-width: $layout-width;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3rem;
+    margin-bottom: 10rem;
+    padding: 2rem;
+    z-index: 1;
+
+    .rdoerImageDiv {
+      position: relative;
+      &::after {
+        position: absolute;
+        right: 60px;
+        content: "";
+        border-right: 120px solid $gray-10;
+        border-bottom: 120px solid transparent;
+        z-index: 5;
+      }
+    }
+
+    .rdStationEfficiencyContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .rdStationEfficiencyTitle {
+        font-size: 40px;
+        margin-bottom: 0;
+      }
+
+      .rdStationEfficiencySubTitle {
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      ul {
+        .listItem {
+          list-style: none;
+          margin-bottom: 1.5rem;
+          position: relative;
+
+          &::before {
+            content: url("./assets/svg/tickList.svg");
+            position: absolute;
+            left: -2rem;
+          }
+
+          .rdUniversity {
+            color: $primary-color-60;
+          }
+        }
+      }
+    }
+  }
+}
