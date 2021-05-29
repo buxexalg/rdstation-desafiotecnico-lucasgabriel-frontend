@@ -64,10 +64,10 @@
         background-color: $primary-color-100;
         z-index: -1;
         pointer-events: none;
-        border-bottom: 150px solid transparent;
+        border-bottom: 50px solid transparent;
         border-left: 200px solid $gray-10;
         z-index: 0;
-        left: -300px;
+        left: -250px;
         top: 0;
       }
 
@@ -230,4 +230,13 @@
 
 .labelRadio {
   font-weight: 400 !important;
+}
+
+.passwordIcon {
+  width: 15px;
+  height: 15px;
+  margin-top: -25px;
+  margin-left: 400px;
+  z-index: 2;
+  cursor: pointer;
 }
