@@ -1,0 +1,34 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.rdProsCards {
+  max-width: $layout-width;
+  margin: auto;
+  margin-bottom: 8rem;
+
+  .rdProsTitle {
+    font-size: 40px;
+	width: 50%;
+	margin-bottom: 4rem;
+	color: $gray-100;
+  }
+
+  .rdProsCardsContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+
+    .rdProsCardsIndividualCard {
+      box-shadow: 0px 4px 12px rgba(33, 36, 41, 0.14);
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 24px;
+	  color: $gray-100;
+	  max-height: 400px;
+    }
+  }
+}
