@@ -30,7 +30,7 @@
 
     .moreOpportunitiesForYou {
       grid-area: Oportunidades;
-	  padding-top: 5rem;
+      padding-top: 5rem;
 
       .moreOpportunitiesForYouTitle {
         font-size: 56px;
@@ -86,6 +86,7 @@
       .togetherSinceFirstStepTitle {
         font-size: 32px;
         color: $white;
+        margin-top: 0;
       }
 
       .togetherSinceFirstStepText {
@@ -105,9 +106,128 @@
       background-color: $white;
       box-shadow: 0px 4px 12px rgba(33, 36, 41, 0.14);
       border-radius: 2px;
-      padding: 1.5rem;
+      padding: 2rem;
 
       margin-top: 2.5rem;
+
+      .freeTrialFormTitleSection {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+
+        border-bottom: 1px solid $gray-30;
+        padding-bottom: 1.5rem;
+
+        .freeTrialFormTitle {
+          margin-top: 0;
+          margin-bottom: 1rem;
+          font-size: 24px;
+        }
+
+        .freeTrialFormSubTitle {
+          color: $gray-70;
+          font-size: 14px;
+        }
+      }
+
+      .freeTrialFormSection {
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        form {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        p,
+        .chooseYourCompany {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          label,
+          span {
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+          }
+
+          input:not([type="radio"]),
+          select {
+            border: 2px solid $dark;
+            box-shadow: inset 6px 6px 0px #eefbfb;
+            height: 40px;
+            padding: 0.5rem;
+            &:invalid {
+              color: $gray-60;
+            }
+
+            option {
+              color: $gray-100;
+            }
+
+            &::placeholder {
+              color: $gray-60;
+            }
+          }
+
+          .insertYourEmail {
+            margin-bottom: 1rem;
+          }
+        }
+
+        .useTermsListDiv {
+          margin-bottom: 1rem;
+          .useTermsList {
+            color: $gray-70;
+            font-size: 12px;
+            padding-left: 1rem;
+
+            a {
+              color: $primary-color-60;
+            }
+          }
+        }
+
+        .createAccountButton {
+          font-weight: 800;
+          padding: 0.5rem;
+          background-color: $color-highlight-60;
+          border: none;
+          color: $gray-100;
+          position: relative;
+          cursor: pointer;
+          height: 40px;
+
+          &::after {
+            @include bottomButtonTrapezoid;
+            width: 26.5rem;
+            height: 0;
+            left: 0;
+            bottom: -4px;
+          }
+        }
+      }
     }
   }
+}
+
+.chooseYourCompanyRadio,
+.doesntHaveSite {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  label {
+    margin-bottom: 0 !important;
+    margin-left: 0.5rem;
+  }
+}
+
+.labelRadio {
+  font-weight: 400 !important;
 }

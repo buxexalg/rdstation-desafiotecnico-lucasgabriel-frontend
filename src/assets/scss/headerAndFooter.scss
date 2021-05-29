@@ -91,6 +91,7 @@ header {
       height: 2.1rem;
       position: relative;
       margin-right: 1rem;
+      cursor: pointer;
 
       &::after {
         width: 5rem;
@@ -107,6 +108,7 @@ header {
       width: 7rem;
       height: 2.1rem;
       position: relative;
+      cursor: pointer;
 
       img {
         margin-left: 0.5rem;
