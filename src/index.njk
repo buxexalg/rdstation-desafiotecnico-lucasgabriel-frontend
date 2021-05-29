@@ -62,11 +62,10 @@ title: RD Station
         </h3>
       </div>
       <div class="togetherSinceFirstStep">
-        
         <h3 class="togetherSinceFirstStepTitle title">
           Estaremos juntos desde o primeiro passo!
         </h3>
-        <p class="togetherSinceFirstStepText">
+        <div class="togetherSinceFirstStepText">
           Se você ainda não sabe como extrair o máximo das ações digitais, não
           tem problema. O <b>RD Station Marketing</b> é mais que uma ferramenta,
           nos importamos com os seus resultados.
@@ -74,7 +73,7 @@ title: RD Station
           <br />
           <b>Estaremos com você do planejamento até a prática!</b>
           <div class="backgroundRectangle"></div>
-        </p>
+        </div>
       </div>
       <div class="freeTrialForm">
         <section class="freeTrialFormTitleSection">
@@ -87,92 +86,126 @@ title: RD Station
         </section>
         <section class="freeTrialFormSection">
           <form name="leadHomePage" method="POST" data-netlify="true">
-            <label for="name">Diga, qual seu nome?</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Insira seu nome"
-            />
+            <p>
+              <label for="name">Diga, qual seu nome?</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Insira seu nome"
+                required
+              />
+            </p>
+            <p>
+              <label for="workEmail">Seu email de trabalho</label>
+              <input
+                type="email"
+                id="workEmail"
+                name="workEmail"
+                placeholder="Insira seu e-mail"
+                required
+              />
+            </p>
+            <p>
+              <label for="telephone">Seu telefone</label>
+              <input
+                type="tel"
+                id="telephone"
+                name="telephone"
+                placeholder="Insira seu número de telefone com DDD"
+                required
+              />
+            </p>
+            <p>
+              <label for="occupation">Seu cargo de ocupação</label>
+              <select
+                id="occupation"
+                name="occupation"
+                placeholder="Selecione seu cargo"
+                required
+              >
+                <option value="" disabled selected hidden>
+                  Seu cargo de ocupação
+                </option>
+                <option value="vendas">Time de Vendas</option>
+                <option value="marketing">Time de Marketing</option>
+                <option value="tecnologia">Time de Tecnologia</option>
+                <option value="produto">Time de Produto</option>
+              </select>
+            </p>
+            <p>
+              <label for="password">Crie uma senha</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Insira sua senha"
+                required
+              />
+            </p>
+            <p>
+              <label for="confirmPassword">Confirme sua senha</label>
+              <input
+                type="text"
+                id=""
+                name=""
+                placeholder="Confirme sua senha"
+                required
+              />
+            </p>
+            <div class="chooseYourCompany">
+              <span>Qual o site da sua empresa?</span>
+              <div class="chooseYourCompanyRadio">
+                <input
+                  type="radio"
+                  id="companySite"
+                  name="companySite"
+                  value="haveSite"
+                />
+                <label for="companySite" class="labelRadio">Meu site é</label>
+              </div>
+              <input
+                type="text"
+                id="companySiteInfo"
+                name="companySiteInfo"
+                placeholder="Insira o endereço do seu site"
+                class="insertYourEmail"
+                required
+              />
 
-            <label for="workEmail">Seu email de trabalho</label>
-            <input
-              type="email"
-              id="workEmail"
-              name="workEmail"
-              placeholder="Insira seu e-mail"
-            />
+              <div class="doesntHaveSite">
+                <input
+                  type="radio"
+                  id="companySiteNot"
+                  name="companySite"
+                  placeholder="Insira seu nome"
+                  value="doesntHaveSite"
+                  required
+                />
+                <label for="companySiteNot" class="labelRadio">Ainda não tenho site</label>
+              </div>
+            </div>
+            <div class="useTermsListDiv">
+              <ul class="useTermsList">
+                <li>
+                  Ao criar minha conta estou de acordo com os
+                  <a href="#">termos de uso</a> do software e
+                  <a href="#">política de privacidade</a>.
+                </li>
+                <li>
+                  Ao preencher o formulário, concordo em receber comunicações de
+                  acordo com meus interesses.
+                </li>
+                <li>
+                  Você pode alterar suas permissões de comunicação a qualquer
+                  tempo.
+                </li>
+              </ul>
+            </div>
 
-            <label for="telephone">Seu telefone</label>
-            <input
-              type="tel"
-              id="telephone"
-              name="telephone"
-              placeholder="Insira seu número de telefone com DDD"
-            />
-
-            <label for="occupation">Seu cargo de ocupação</label>
-            <select
-              id="occupation"
-              name="occupation"
-              placeholder="Selecione seu cargo"
-            >
-              <option value="vendas">Time de Vendas</option>
-              <option value="marketing">Time de Marketing</option>
-              <option value="tecnologia">Time de Tecnologia</option>
-              <option value="produto">Time de Produto</option>
-            </select>
-
-            <label for="password">Crie uma senha</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Insira sua senha"
-            />
-
-            <label for="confirmPassword">Confirme sua senha</label>
-            <input type="text" id="" name="" placeholder="Confirme sua senha" />
-
-            <span>Qual o site da sua empresa?</span>
-            <input
-              type="radio"
-              id="companySite"
-              name="companySite"
-              placeholder="Insira seu nome"
-              value="haveSite"
-            />
-            <label for="companySite">Meu site é</label>
-            <input
-              type="text"
-              id="companySiteInfo"
-              name="companySiteInfo"
-              placeholder="Insira o endereço do seu site"
-            />
-
-            <input
-              type="radio"
-              id="companySiteNot"
-              name="companySiteNot"
-              placeholder="Insira seu nome"
-              value="doesntHaveSite"
-            />
-            <label for="companySiteNot">Ainda não tenho site</label>
-            <ul class="useTermsList">
-              <li>
-                Ao criar minha conta estou de acordo com os
-                <a href="#">termos de uso</a> do software e
-                <a href="#">política de privacidade</a>.
-              </li>
-              <li>
-                Ao preencher o formulário, concordo em receber comunicações de
-                acordo com meus interesses.
-              </li>
-              <li>
-                Você pode alterar suas permissões de comunicação a qualquer
-                tempo.
-              </li>
-            </ul>
+            <button type="submit" class="createAccountButton">
+              CRIAR MINHA CONTA
+            </button>
           </form>
         </section>
       </div>
