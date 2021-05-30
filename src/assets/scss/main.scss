@@ -16,6 +16,10 @@ body {
 	margin: 0;
 }
 
+.overflowHidden { 
+	overflow-y: hidden;
+}
+
 .title {
 	font-family: $darkergrotesque;
 	font-weight: 900;
