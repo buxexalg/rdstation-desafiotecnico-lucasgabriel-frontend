@@ -17,6 +17,33 @@
 
   @media screen and (max-width: $cellphone) {
     max-width: $layout-width-cellphone !important;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    .freeAccountButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2.5rem;
+      font-weight: 800;
+      width: 15rem;
+      height: 2.5rem;
+      background-color: $primary-color-60;
+      border: none;
+      text-decoration: none;
+      color: $gray-100;
+      position: relative;
+      align-self: center;
+      margin-bottom: 2rem;
+
+      &::after {
+        @include bottomButtonTrapezoid;
+        width: 14.3rem;
+        height: 0;
+        bottom: -4px;
+      }
+    }
   }
 
   .freeAccountText {
@@ -24,8 +51,18 @@
     flex-direction: column;
     justify-content: center;
 
+    @media screen and (max-width: $cellphone) {
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
     .freeAccountTitle {
       font-size: 40px;
+
+      @media screen and (max-width: $cellphone) {
+        font-size: 32px;
+        margin-bottom: 1rem;
+      }
     }
 
     .freeAccountButton {
@@ -57,6 +94,11 @@
     grid-template-rows: repeat(2, 100px);
     grid-column-gap: 5rem;
     margin: auto;
+
+    @media screen and (max-width: $cellphone) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 100px);
+    }
 
     .partnerToolsContainer {
       display: flex;

@@ -5,6 +5,11 @@
   position: relative;
   height: 50vh;
 
+  @media screen and (max-width: $cellphone) {
+    background-color: $gray-10;
+    height: auto;
+  }
+
   .backgroundRectangle {
     position: absolute;
     height: 70%;
@@ -18,6 +23,10 @@
 
     @media screen and (max-width: $smallerdesktop) {
       width: 98vw;
+    }
+
+    @media screen and (max-width: $cellphone) {
+      display: none;
     }
   }
 
@@ -35,6 +44,8 @@
 
     @media screen and (max-width: $cellphone) {
       max-width: $layout-width-cellphone;
+      display: flex;
+      flex-direction: column;
     }
 
     .understandRdStationText {
@@ -43,8 +54,17 @@
       justify-content: center;
       z-index: 2;
 
+      @media screen and (max-width: $cellphone) {
+        justify-content: center;
+        align-items: center;
+      }
+
       .understandRdStationTitle {
         font-size: 32px;
+
+        @media screen and (max-width: $cellphone) {
+          font-size: 24px;
+        }
       }
 
       .understandRdStationButton {
@@ -63,6 +83,10 @@
         font-size: 14px;
         border: 2px solid $dark;
 
+        @media screen and (max-width: $cellphone) {
+          margin-top: 0;
+        }
+
         &::after {
           @include bottomButtonTrapezoid;
           width: 14.3rem;
@@ -77,6 +101,13 @@
       margin: auto;
       margin-right: 6rem;
 
+      .understandRdStationVideoImage {
+        @media screen and (max-width: $cellphone) {
+          margin-top: 2rem;
+          width: 90vw;
+        }
+      }
+
       .understandRdStationVideoPlay {
         position: absolute;
         margin: auto;
@@ -85,6 +116,7 @@
         top: 0;
         bottom: 0;
         text-align: center;
+        max-width: 80px;
       }
     }
   }

@@ -20,12 +20,20 @@
   }
 
   @media screen and (max-width: $cellphone) {
+    background-image: url("./assets/images/bgWhyChooseRDMobile.png");
     max-width: $layout-width-cellphone;
+    padding: 2rem 1rem;
+    height: auto;
+    max-height: 1000px;
   }
 
   .whyBussinessChooseRDTitle {
     color: $white;
     font-size: 40px;
+
+    @media screen and (max-width: $cellphone) {
+      font-size: 32px;
+    }
   }
 
   .whyBussinessChooseRDText {
@@ -45,6 +53,11 @@
     text-decoration: none;
     color: $gray-100;
     position: relative;
+
+    @media screen and (max-width: $cellphone) {
+      margin-top: 1rem;
+      padding: 1rem 0;
+    }
 
     &::after {
       @include bottomButtonTrapezoid;

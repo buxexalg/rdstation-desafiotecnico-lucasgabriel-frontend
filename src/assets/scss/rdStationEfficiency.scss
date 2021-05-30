@@ -6,6 +6,11 @@
   z-index: -1;
   padding-top: 5rem;
 
+  @media screen and (max-width: $cellphone) {
+    padding-top: 0 !important;
+    position: relative;
+  }
+
   &::before {
     content: "";
     background-color: $gray-10;
@@ -15,6 +20,14 @@
     pointer-events: none;
     @media screen and (max-width: $smallerdesktop) {
       border-right: 700px solid transparent;
+    }
+
+    @media screen and (max-width: $cellphone) {
+      border-bottom: 380px solid $white;
+      border-right: 600px solid transparent;
+      bottom: 0;
+      left: -400px;
+      position: absolute;
     }
   }
 
@@ -34,10 +47,20 @@
 
     @media screen and (max-width: $cellphone) {
       max-width: $layout-width-cellphone;
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 2rem 0;
     }
 
     .rdoerImageDiv {
       position: relative;
+
+      img {
+        @media screen and (max-width: $cellphone) {
+          max-width: 90vw;
+        }
+      }
+
       &::after {
         position: absolute;
         right: 60px;
@@ -60,11 +83,20 @@
       .rdStationEfficiencyTitle {
         font-size: 40px;
         margin-bottom: 0;
+
+        @media screen and (max-width: $cellphone) {
+          margin-top: 0;
+          font-size: 24px;
+        }
       }
 
       .rdStationEfficiencySubTitle {
         font-size: 20px;
         font-weight: 400;
+
+        @media screen and (max-width: $cellphone) {
+          font-size: 14px;
+        }
       }
 
       ul {
@@ -77,6 +109,10 @@
             content: url("./assets/svg/tickList.svg");
             position: absolute;
             left: -2rem;
+
+            @media screen and (max-width: $cellphone) {
+              top: 4px;
+            }
           }
 
           .rdUniversity {

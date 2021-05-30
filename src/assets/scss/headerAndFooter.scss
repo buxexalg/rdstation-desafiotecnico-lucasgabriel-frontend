@@ -40,6 +40,10 @@ header {
       width: 70%;
     }
 
+    @media screen and (max-width: $cellphone) {
+      display: none;
+    }
+
     .menuItem {
       color: $dark;
       text-decoration: none;
@@ -146,15 +150,46 @@ footer {
   .footerLowerDiv {
     @include headerFooterStyle;
     background-color: $primary-color-60;
+
+    @media screen and (max-width: $smallerdesktop) {
+      max-width: $layout-width-smallerdesktop;
+    }
+
+    @media screen and (max-width: $cellphone) {
+      max-width: $layout-width-cellphone;
+    }
   }
 
   .footerUpperDiv {
     border-bottom: 1px solid $primary-color-50;
     padding-bottom: 1.5rem;
 
+    @media screen and (max-width: $cellphone) {
+      display: flex;
+      flex-direction: column;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    a {
+      @media screen and (max-width: $cellphone) {
+        margin-bottom: 1rem !important;
+      }
+    }
+
     .navSocialIcons {
       a {
         margin-left: 1.55rem;
+      }
+
+      @media screen and (max-width: $cellphone) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 1rem;
+        border-top: 1px solid $primary-color-50;
+        width: 100%;
       }
     }
   }
@@ -165,6 +200,10 @@ footer {
     align-items: center;
     padding-top: 1rem;
     color: $dark;
+
+    @media screen and (max-width: $cellphone) {
+      padding-top: 0;
+    }
 
     .footerTextSpan {
       font-weight: bold;
