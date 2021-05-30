@@ -2,7 +2,7 @@
 
 ## Landing Page RD Station
 
-Repositório referente a uma aplicação utilizando o [11ty](https://www.11ty.dev/) e [Nunjucks](https://mozilla.github.io/nunjucks/) que tem como função gerar o template de uma landing page do RD Station.
+Repositório referente a uma aplicação utilizando o gerador de sites estáticos [11ty](https://www.11ty.dev/) e a linguagem de templates [Nunjucks](https://mozilla.github.io/nunjucks/) que tem como função gerar o template de uma landing page do RD Station.
 
 Foi feito deploy do projeto, cujo link é: https://rdstation-lucasgabriel.netlify.app/
 
